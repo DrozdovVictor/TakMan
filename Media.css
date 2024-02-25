@@ -1,0 +1,545 @@
+:root {
+  --main-color: rgba(24, 31, 38, 1);
+  --yellow: rgba(255, 184, 2, 1);
+}
+
+@media (min-width: 320px) and (max-width: 959px) {
+  h1 {
+    font-size: 28px;
+    line-height: 36px;
+  }
+
+  h2, h3 {
+    font-size: 24px;
+    line-height: 30px;
+  }
+
+  p, li, span, a {
+    font-size: 12px;
+    line-height: 16px;
+  }
+
+  button {
+    padding: 6px 24px;
+    font-size: 12px;
+    line-height: 16px;
+  }
+
+  /* Header */
+
+  .header-back-img {
+    width: 100%;
+    height: 100%;
+  }
+
+  header:before {
+    display: none;
+  }
+
+  header:after {
+    width: 100%;
+  }
+
+  .header-nav {
+    height: 75px;
+  }
+
+  .header-logo-img {
+    width: 110px;
+    height: 40px;
+  }
+
+  .header-nav-row, .header-nav-social-row, .header-nav__button {
+    display: none;
+  }
+
+  /* Mobile Nav Content */
+
+  .mobile-nav-block {
+    display: block;
+    width: 30px;
+    height: 25px;
+  }
+
+  .mobile-nav-block__span {
+    height: 3px;
+  }
+
+  .mobile-nav-block__span:nth-child(2) {
+    top: 11px;
+  }
+
+  .mobile-nav-content .header-nav-row, .mobile-nav-content .header-nav__button, .mobile-nav-content .header-nav-social-row {
+    display: flex;
+  }
+
+
+  /* Header Content */
+
+  .header-content {
+    padding: 195px 0px 30px;
+    row-gap: 5px;
+  }
+
+  .header__heading {
+    max-width: 250px;
+  }
+
+  .header-content__text {
+    max-width: 330px;
+  }
+
+  .header-content__not-mobile-text {
+    display: none;
+  }
+
+  .header-content__text + .header-content__button {
+    margin-top: 15px;
+  }
+
+  /* Services Section */
+
+  .services .container {
+    padding: 30px 25px 25px;
+  }
+
+  .services-content {
+    row-gap: 5px;
+  }
+
+  .services__text + .services__button {
+    margin-top: 15px;
+  }
+
+  /* Services Selider */
+
+  .services-slider-item {
+    padding: 25px;
+    min-width: 285px;
+    height: 380px;
+    background-size: 100% 100%;
+  }
+
+  .services-slider-item:last-child {
+    min-width: 350px;
+  }
+
+  /* Skipass Section */
+
+  .skipass {
+    padding: 30px 0px;
+  }
+
+  .skipass-conent {
+    row-gap: 5px;
+  }
+
+  .skipass__text + .skipass__button {
+    margin-top: 15px;
+  }
+
+  /* Poster Section */
+
+  .poster {
+    padding: 30px 0px 25px;
+  }
+
+  .poster-content {
+    row-gap: 5px;
+  }
+
+  .poster__text + .poster__button {
+    margin-top: 15px;
+  }
+
+  /* Poster Slider */
+
+  .poster-slider {
+    height: 380px;
+  }
+
+  .poster-slider__img {
+    width: 285px;
+    flex-grow: 1;
+  }
+
+  /* Residence Section */
+
+  .residence {
+    height: 375px;
+  }
+
+  .residence:before {
+    width: 100%;
+    height: 50%;
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0));
+  }
+
+  .residence-content {
+    padding-top: 30px;
+    row-gap: 5px;
+  }
+
+  .residence__heading {
+    max-width: 200px;
+  }
+
+  .residence__text + .residence__button {
+    margin-top: 15px;
+  }
+
+  /* Info Section */
+
+  .info-content {
+    flex-direction: column-reverse;
+  }
+
+  .info-item {
+    width: 100%;
+    padding: 30px 25px;
+    align-items: flex-start;
+    row-gap: 7px;
+  }
+
+  .info__heading {
+    padding-bottom: 0px;
+    border-bottom: 1px solid ;
+  }
+
+  .info-item.info-item_black {
+    padding: 30px 25px;
+    row-gap: 10px;
+  }
+
+  .info-item-ul {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows:  1fr 1fr;
+    gap: 10px;
+  }
+
+  .info-item-li {
+    row-gap: 1px;
+  }
+
+  /* Map Section */
+
+  .map {
+    height: 490px;
+  }
+
+  /* Footer */
+
+  .footer-content {
+    flex-direction: column-reverse;
+  }
+
+  .footer-content-item {
+    width: 100%;
+    padding: 30px 25px;
+    row-gap: 5px;
+  }
+
+  .footer-content-ul {
+    row-gap: 0px;
+  }
+
+  .footer-content-item.footer-content-item_black {
+    width: 100%;
+    padding: 30px 25px;
+    align-items: flex-start;
+  }
+
+  .footer-content-item-content {
+    row-gap: 10px;
+  }
+
+  .footer-logo-img {
+    width: 110px;
+    height: 40px;
+  }
+
+
+  .footer-logo-img + .footer-content-ul-2 {
+    margin-top: 15px;
+  }
+
+  .footer__link {
+    padding-bottom: 1px;
+    line-height: 25px;
+  }
+
+  .footer-content-ul-2 + .footer__text {
+    margin-top: 10px;
+  } 
+}
+
+@media (min-width: 475px) and (max-width: 767px){
+  /* Header */
+
+  header {
+    height: 550px;
+  }
+
+  .header-back-img {
+    top: -20px;
+    height: 650px;
+  }
+}
+
+@media (min-width: 960px) and (max-width: 1750px) {
+  h1 {
+    font-size: 64px;
+    line-height: 72px;
+  }
+
+  h2, h3 {
+    font-size: 48px;
+    line-height: 54px;
+  }
+
+  p, li, span, a {
+    font-size: 16px;
+    line-height: 22px;
+  }
+
+  button {
+    padding: 11px 32.5px;
+    font-size: 16px;
+    line-height: 22px;
+  }
+
+  /* Header */
+
+  .header-back-img {
+    width: 100%;
+    height: 100%;
+  }
+
+  header:before {
+    height: 50%;
+  }
+
+  header:after {
+    width: 50%;
+  }
+
+  .header-nav-row {
+    display: none;
+  }
+
+  /* Mobile Nav Content */
+
+  .mobile-nav-block {
+    display: block;
+  }
+
+  .mobile-nav-content .header-nav-row, .mobile-nav-content .header-nav__button, .mobile-nav-content .header-nav-social-row {
+    display: flex;
+  }
+
+  /* Header Content */
+
+  .header-content {
+    padding: 240px 0px 110px;
+  }
+
+  .header__heading {
+    max-width: 520px;
+  }
+
+  /* Services Section */
+
+  .services .container {
+    padding: 60px 25px 40px;
+  }
+
+  .services__text + .services__button {
+    margin-top: 10px;
+  }
+
+  /* Services Slider */
+
+  .services-slider-item {
+    padding: 60px;
+    min-width: 580px;
+    height: 770px;
+    background-size: 100% 100%;
+  }
+
+  .services-slider-item__text {
+    max-width: 350px;
+  }
+
+  /* Skipass Section */
+
+  .skipass {
+    padding: 60px 0px;
+  }
+
+  .skipass__text + .skipass__button {
+    margin-top: 10px;
+  }
+
+  /* Poster Section */
+
+  .poster {
+    padding: 60px 0px 40px;
+  }
+
+  .poster__text {
+    max-width: none;
+  }
+
+  .poster__text + .poster__button {
+    margin-top: 10px;
+  }
+
+  /* Poster Slider */ 
+
+  .poster-slider {
+    height: 770px;
+  }
+
+  .poster-slider__img {
+    width: 580px;
+  }
+
+  /* Residence Section */
+
+  .residence-content {
+    padding-top: 60px;
+  }
+
+  .residence__heading {
+    max-width: 400px;
+  }
+
+  .residence__text + .residence__button {
+    margin-top: 10px;
+  }
+
+  /* Info Section */
+
+  .info-content {
+    flex-direction: column-reverse;
+  }
+
+  .info-item, .info-item.info-item_black {
+    width: 100%;
+    padding: 60px 0px 60px 60px;
+  }
+
+  .info-item {
+    align-items: flex-start;
+    background-color: var(--main-color);
+  }
+
+  .info__heading1 {
+    padding-bottom: 0px;
+    border-bottom: 3px solid rgba(255, 255, 255, 0.5);
+  }
+
+  .info__heading1, .info__text {
+    color: #fff;
+  }
+
+  .info-item.info-item_black {
+    background-color: #fff;
+  }
+
+  .info-item-ul {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    min-width: 575px;
+  }
+
+  .info__heading2, .info-item-li__p {
+    color: var(--main-color);
+  }
+
+  /* Map Section */
+
+  .map {
+    height: 820px;
+  }
+
+  /* Footer */
+
+  .footer-content {
+    flex-direction: column-reverse;
+  }
+
+  .footer-content-item, .footer-content-item.footer-content-item_black {
+    width: 100%;
+    padding: 60px;
+    align-items: flex-start;
+  }
+
+  .footer-content-ul {
+    row-gap: 5px;
+  }
+
+  .footer-logo-img + .footer-content-ul-2 {
+    margin-top: 20px;
+  }
+
+  .footer-content-ul-2 {
+    row-gap: 7px;
+  }
+
+  .footer-content-ul-2 + .footer__text {
+    margin-top: 0px;
+  }
+}
+
+@media (min-width: 960px) and (max-width: 1280px) {
+  /* Residence Section */
+  .residence {
+    height: 700px;
+  }
+}
+
+@media (min-width: 1280px) and (max-width: 1600px) {
+  /* Header */
+
+  header {
+    height: 950px;
+  }
+  
+  .header-back-img {
+    top: -90px;
+    height: 1100px;
+  }
+}
+
+@media (min-width: 1751px) and (max-width: 1830px) {
+  /* Info Section */
+
+  .info-item {
+    padding: 80px 280px 80px 0px; 
+  }
+}
+
+@media (min-width: 1920px) {
+  /* Header */
+
+  .header-back-img {
+    width: 100%;
+    height: 100%;
+  }
+
+  /* Services Slider */
+
+  .services-slider-item {
+    flex-grow: 1;
+  }
+
+  /* Poster Slider */
+
+  .poster-slider__img {
+    flex-grow: 1;
+  }
+}
