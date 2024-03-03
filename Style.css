@@ -363,6 +363,7 @@ header:after {
   overflow: scroll;
   position: relative;
   scroll-behavior: smooth;
+  touch-action: auto;
 }
 
 .services-slider::-webkit-scrollbar {
