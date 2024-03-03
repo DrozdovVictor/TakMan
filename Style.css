@@ -344,18 +344,83 @@ header:after {
   position: relative;
 }
 
-.services-slider-wrapper:before {
+.services-slider-wrapper:before, .services-slider-wrapper:after {
   content: '';
   position: absolute;
+  width: 200px;
+  height: 100%;
+  background: linear-gradient(90deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
+}
+
+.services-slider-wrapper:after {
+  top: 0px;
+  right: 0px;
+  background: linear-gradient(-90deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
 }
 
 .services-slider {
   display: flex;
   overflow: scroll;
+  position: relative;
+  scroll-behavior: smooth;
 }
 
 .services-slider::-webkit-scrollbar {
   display: none;
+}
+
+.slider-arrow-left, .slider-arrow-right {
+  position: absolute;
+  top: 43%;
+  width: 75px;
+  height: 75px;
+  z-index: 7;
+}
+
+.slider-arrow-left {
+  left: 30px;
+}
+
+.slider-arrow-left:before, .slider-arrow-left:after, .slider-arrow-right:before, .slider-arrow-right:after {
+  content: '';
+  position: absolute;
+  width: 35px;
+  height: 5px;
+  background-color: #fff;
+  border-radius: 5px;
+  transform-origin: right;
+  z-index: 6;
+  transition: .3s;
+}
+
+.slider-arrow-left:before {
+  transform: rotate(-45deg);
+}
+
+.slider-arrow-left:hover:before, .slider-arrow-left:hover:after, .slider-arrow-right:hover:before, .slider-arrow-right:hover:after {
+  opacity: .5;
+}
+
+.slider-arrow-left:after {
+  top: 48px;
+  transform: rotate(45deg);
+}
+
+.slider-arrow-right {
+  right: 30px;
+}
+
+.slider-arrow-right:before {
+  transform-origin: left;
+  transform: rotate(45deg);
+  right: 0px;
+}
+
+.slider-arrow-right:after {
+  top: 48px;
+  right: 0px;
+  transform-origin: left;
+  transform: rotate(-45deg);
 }
 
 .services-slider-item {
@@ -366,18 +431,20 @@ header:after {
   display: flex;
   flex-direction: column;
   row-gap: 20px;
-  background-image: url('Images/Services_Section/rent-img.png');
-  background-repeat: no-repeat;
-  background-size: 100% 100%;
+  position: relative;
 }
 
-.services-slider-item:nth-child(2) {
-  background-image: url('Images/Services_Section/rental-img.png');
+.services-slider-item.services-slider-item_w850 {
+  min-width: 850px;
 }
 
-.services-slider-item:last-child {
-  background-image: url('Images/Services_Section/snowboard.png');
-  background-size: 100% 100%;
+.services-slider__img {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  z-index: -5;
 }
 
 .services-slider-item__text {
@@ -431,11 +498,35 @@ header:after {
   border: 2px solid var(--main-color);
 }
 
+.poster__button:hover {
+  background-color: var(--main-color);
+  color: #fff;
+}
+
 /* Poster Slider */
+
+.poster-slider-wrapper {
+  position: relative;
+}
+
+.poster-slider-wrapper:before, .poster-slider-wrapper:after {
+  content: '';
+  position: absolute;
+  width: 200px;
+  height: 100%;
+  background: linear-gradient(90deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
+}
+
+.poster-slider-wrapper:after {
+  top: 0px;
+  right: 0px;
+  background: linear-gradient(-90deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
+}
 
 .poster-slider {
   display: flex;
   overflow: scroll;
+  scroll-behavior: smooth;
   height: 940px;
 }
 
@@ -443,9 +534,17 @@ header:after {
   display: none;
 }
 
-.poster-slider__img {
-  width: 710px;
+.poster-slider-item {
+  position: relative;
+  min-width: 710px;
   height: 100%;
+}
+
+.poster-slider__img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: -10;
 }
 
 /* Residence Section */

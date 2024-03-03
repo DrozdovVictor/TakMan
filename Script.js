@@ -7,7 +7,25 @@ const mobileNavContent = document.getElementById('mobile-nav-content')
 const mobileNavRow = document.getElementById('mobile-nav-row')
 const mobileNavRowItems = Array.from(mobileNavRow.children)
 
+const posterSlider = document.getElementById('poster-slider') // poster-slider section
+const infoItemLiPText = document.querySelectorAll('.info-item-li__p-text') // info section
+
+/* Services Slider Variables */
+
+const serviceSliderArrowLeft = document.querySelectorAll('.slider-arrow-left')
+const serviceSliderArrowRight = document.querySelectorAll('.slider-arrow-right')
+const serviceSlider = document.getElementById('services-slider')
+const serviceSliderItems = Array.from(serviceSlider.children)
+
 /* Functions */
+
+window.addEventListener('load', function () {
+  if (window.innerWidth <= 959) {
+    infoItemLiPText.forEach(function (element) {
+      element.innerHTML = 'Ежедневно <br> с 9:00 до 23:00';
+    });
+  } else element.innerHTML = 'Ежедневно с 9:00 до 23:00';
+});
 
 window.addEventListener('scroll', function () {
   headerNav.classList.add('active');
@@ -37,3 +55,18 @@ mobileNavRowItems.forEach(function (element) {
   })
 })
 
+/* Services Section functions */
+
+serviceSliderArrowLeft.forEach(function (element) {
+  element.addEventListener('click', function () {
+    serviceSlider.scrollLeft -= serviceSlider.offsetWidth;
+    posterSlider.scrollLeft -= posterSlider.offsetWidth;
+  });
+})
+
+serviceSliderArrowRight.forEach(function (element) {
+  element.addEventListener('click', function () {
+    serviceSlider.scrollLeft += serviceSlider.offsetWidth;
+    posterSlider.scrollLeft += posterSlider.offsetWidth;
+  });
+})
