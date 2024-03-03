@@ -347,7 +347,7 @@ header:after {
 .services-slider-wrapper:before, .services-slider-wrapper:after {
   content: '';
   position: absolute;
-  width: 150px;
+  width: 100px;
   height: 100%;
   background: linear-gradient(90deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
 }
@@ -512,7 +512,7 @@ header:after {
 .poster-slider-wrapper:before, .poster-slider-wrapper:after {
   content: '';
   position: absolute;
-  width: 200px;
+  width: 100px;
   height: 100%;
   background: linear-gradient(90deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
 }
