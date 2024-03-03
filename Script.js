@@ -59,14 +59,15 @@ mobileNavRowItems.forEach(function (element) {
 
 serviceSliderArrowLeft.forEach(function (element) {
   element.addEventListener('click', function () {
-    serviceSlider.scrollLeft -= serviceSlider.offsetWidth;
-    posterSlider.scrollLeft -= posterSlider.offsetWidth;
+    serviceSlider.scrollLeft -= serviceSlider.offsetWidth + 500;
+    posterSlider.scrollLeft -= posterSlider.offsetWidth + 500;
+    console.log(serviceSlider.scrollLeft)
   });
 })
 
 serviceSliderArrowRight.forEach(function (element) {
   element.addEventListener('click', function () {
-    serviceSlider.scrollLeft += serviceSlider.offsetWidth;
-    posterSlider.scrollLeft += posterSlider.offsetWidth;
+    serviceSlider.scrollLeft += serviceSlider.offsetWidth + 500;
+    posterSlider.scrollLeft += posterSlider.offsetWidth + 500;
   });
 })
